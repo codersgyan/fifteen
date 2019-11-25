@@ -128,7 +128,7 @@ class SimpleSolver implements SolverContract {
 
 	public function up($move = false) {
 		if ($move) {
-			# Swaping ( Moving blank up )
+			# Swaping ( Moving blank space up )
 			$temp = $this->shuffledArray[$this->currentPosition - ($this->level + 1)];
 			$this->shuffledArray[$this->currentPosition - ($this->level + 1)] =
 			$this->shuffledArray[$this->currentPosition];
@@ -137,7 +137,7 @@ class SimpleSolver implements SolverContract {
 			return true;
 		}
 		$localArray = $this->shuffledArray;
-		# Swaping ( Moving blank up )
+		# Swaping ( Moving blank space up )
 		$temp = $localArray[$this->currentPosition - ($this->level + 1)];
 		$localArray[$this->currentPosition - ($this->level + 1)] = $localArray[$this->currentPosition];
 		$localArray[$this->currentPosition] = $temp;
@@ -146,7 +146,7 @@ class SimpleSolver implements SolverContract {
 
 	public function down($move = false) {
 		if ($move) {
-			# Swaping ( Moving blank up )
+			# Swaping ( Moving blank space down )
 			$temp = $this->shuffledArray[$this->currentPosition + ($this->level + 1)];
 			$this->shuffledArray[$this->currentPosition + ($this->level + 1)] = $this->shuffledArray[$this->currentPosition];
 			$this->shuffledArray[$this->currentPosition] = $temp;
@@ -154,7 +154,7 @@ class SimpleSolver implements SolverContract {
 			return true;
 		}
 		$localArray = $this->shuffledArray;
-		# Swaping ( Moving blank up )
+		# Swaping ( Moving blank space down )
 		$temp = $localArray[$this->currentPosition + ($this->level + 1)];
 		$localArray[$this->currentPosition + ($this->level + 1)] = $localArray[$this->currentPosition];
 		$localArray[$this->currentPosition] = $temp;
@@ -163,7 +163,7 @@ class SimpleSolver implements SolverContract {
 
 	public function left($move = false) {
 		if ($move) {
-			# Swaping ( Moving blank up )
+			# Swaping ( Moving blank space left )
 			$temp = $this->shuffledArray[$this->currentPosition - 1];
 			$this->shuffledArray[$this->currentPosition - 1] = $this->shuffledArray[$this->currentPosition];
 			$this->shuffledArray[$this->currentPosition] = $temp;
@@ -171,7 +171,7 @@ class SimpleSolver implements SolverContract {
 			return true;
 		}
 		$localArray = $this->shuffledArray;
-		# Swaping ( Moving blank up )
+		# Swaping ( Moving blank space left )
 		$temp = $localArray[$this->currentPosition - 1];
 		$localArray[$this->currentPosition - 1] = $localArray[$this->currentPosition];
 		$localArray[$this->currentPosition] = $temp;
@@ -180,7 +180,7 @@ class SimpleSolver implements SolverContract {
 
 	public function right($move = false) {
 		if ($move) {
-			# Swaping ( Moving blank up )
+			# Swaping ( Moving blank space right )
 			$temp = $this->shuffledArray[$this->currentPosition + 1];
 			$this->shuffledArray[$this->currentPosition + 1] = $this->shuffledArray[$this->currentPosition];
 			$this->shuffledArray[$this->currentPosition] = $temp;
@@ -188,7 +188,7 @@ class SimpleSolver implements SolverContract {
 			return true;
 		}
 		$localArray = $this->shuffledArray;
-		# Swaping ( Moving blank up )
+		# Swaping ( Moving blank space right )
 		$temp = $localArray[$this->currentPosition + 1];
 		$localArray[$this->currentPosition + 1] = $localArray[$this->currentPosition];
 		$localArray[$this->currentPosition] = $temp;
